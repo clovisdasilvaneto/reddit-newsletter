@@ -37,6 +37,8 @@ $ npm run test:cov
 
 ## API DOCS
 
+**Deployed Version**: You can find the deployed api docs by [clicking here](git@github.com:clovisdasilvaneto/reddit-newsletter.git).
+
 After you have your environment running, you can open the local api by going to [http://localhost:3000/api/](http://localhost:3000/api/)
 
 ## License
