@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { RedditModule } from 'src/main-modules/reddit/reddit.module';
+import { RedditModule } from 'src/modules/reddit/reddit.module';
 import { SchedullerService } from './scheduller.service';
 
 @Module({

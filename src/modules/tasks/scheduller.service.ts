@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { RedditService } from 'src/main-modules/reddit/reddit.service';
+import { RedditService } from 'src/modules/reddit/reddit.service';
 
 @Injectable()
 export class SchedullerService {

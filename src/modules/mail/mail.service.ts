@@ -4,7 +4,7 @@ import {
   SEND_GRID_DYNAMIC_TEMPLATE_ID,
   SEND_GRID_SENDER,
 } from 'src/config';
-import { User } from 'src/main-modules/user/user.types';
+import { User } from 'src/modules/user/user.types';
 
 const sgMail = require('@sendgrid/mail');
 
@@ -20,8 +20,7 @@ export class MailService {
     };
 
     return sgMail.send(msg).catch((error) => {
-      console.error(error.response.body);
-      throw 'Error when sending dynamic email';
+      throw 'Error when sending dynamic email: ' + error;
     });
   }
 

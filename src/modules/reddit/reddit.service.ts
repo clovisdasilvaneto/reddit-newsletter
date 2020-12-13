@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Injectable, Logger } from '@nestjs/common';
 import store, { findWhere } from 'src/db';
-import { MailService } from 'src/main-modules/mail/mail.service';
+import { MailService } from 'src/modules/mail/mail.service';
 import { User } from '../user/user.types';
 import { Posts } from './reddit.types';
 
