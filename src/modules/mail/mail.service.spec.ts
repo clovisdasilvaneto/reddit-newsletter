@@ -1,9 +1,12 @@
 import { SEND_GRID_DYNAMIC_TEMPLATE_ID, SEND_GRID_SENDER } from 'src/config';
-import { MailService } from '../mail/mail.service';
+import { MailService } from './mail.service';
 
 jest.mock('@sendgrid/mail', () => ({
   setApiKey: (API_KEY) => API_KEY,
-  send: (msg) => Promise.resolve(msg),
+  send: (msg) =>
+    Object.keys(msg.personalizations).length
+      ? Promise.resolve(msg)
+      : Promise.reject(msg),
 }));
 
 describe('MailService', () => {
@@ -24,5 +27,17 @@ describe('MailService', () => {
       personalizations: emailTemplate,
       template_id: SEND_GRID_DYNAMIC_TEMPLATE_ID,
     });
+  });
+
+  it('should throw an error when email function is rejected', async () => {
+    const emailTemplate = {};
+
+    expect.assertions(1);
+
+    try {
+      await mailService.sendDynamicEmail(emailTemplate);
+    } catch (e) {
+      expect(e).toBeDefined();
+    }
   });
 });

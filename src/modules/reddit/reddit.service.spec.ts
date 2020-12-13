@@ -65,7 +65,7 @@ describe('RedditService', () => {
       .spyOn(mailService, 'sendDynamicEmail')
       .mockImplementation(sendEmailMock);
 
-    await redditService.handleCron();
+    await redditService.sendTopChannels();
 
     expect(sendEmailMock).toBeCalled();
     expect(getMostVottedPostsMock).toBeCalledWith('NewsWorld', 0, [
