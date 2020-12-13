@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { RedditModule } from 'src/modules/reddit/reddit.module';
-import { SchedullerService } from './scheduller.service';
+import { SchedulerService } from './scheduller.service';
 
 @Module({
-  providers: [SchedullerService],
+  providers: [SchedulerService],
   imports: [RedditModule],
 })
 export class TasksModule {}
