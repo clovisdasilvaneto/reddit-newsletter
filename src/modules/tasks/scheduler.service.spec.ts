@@ -1,6 +1,6 @@
 import { MailService } from 'src/modules/mail/mail.service';
 import { RedditService } from 'src/modules/reddit/reddit.service';
-import { SchedulerService } from './scheduller.service';
+import { SchedulerService } from './scheduler.service';
 
 describe('SchedulerService', () => {
   let scheduler: SchedulerService;
