@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import store from 'src/fakedb';
+import store from 'src/db';
 
 import { User, UserBody } from './user.types';
 

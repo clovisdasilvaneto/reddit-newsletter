@@ -13,7 +13,7 @@ const USER_MOCK: User = {
 
 const MOCKED_ID = 'asdiajh3MOCKED_ID';
 
-jest.mock('src/fakedb', () => {
+jest.mock('src/db', () => {
   return {
     default: {
       collection: () => ({

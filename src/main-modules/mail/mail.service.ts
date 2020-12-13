@@ -10,7 +10,7 @@ const sgMail = require('@sendgrid/mail');
 
 @Injectable()
 export class MailService {
-  async sendDynamicEmail(dynamicTemplate) {
+  async sendDynamicEmail(dynamicTemplate): Promise<any> {
     sgMail.setApiKey(SEND_GRID_API_KEY);
 
     const msg = {

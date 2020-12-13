@@ -14,7 +14,7 @@ const USER_MOCK: User = {
   channels: ['NewsWorld'],
 };
 
-jest.mock('src/fakedb', () => ({
+jest.mock('src/db', () => ({
   default: {
     collection: () => ({
       list: () => [USER_MOCK],
