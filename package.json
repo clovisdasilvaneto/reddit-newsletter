@@ -74,7 +74,9 @@
       "<rootDir>/**/*.*"
     ],
     "coveragePathIgnorePatterns": [
-      ".spec.ts$"
+      ".spec.ts$",
+      "app.module.ts",
+      "main.ts"
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node",
